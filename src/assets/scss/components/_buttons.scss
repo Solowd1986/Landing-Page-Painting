@@ -1,0 +1,45 @@
+
+.btn {
+  padding: 22px 40px 21px;
+  font-size: 15px;
+  font-weight: 900;
+  color: $white;
+  text-transform: uppercase;
+  border-radius: 6px;
+
+  &:active, &:focus {
+    outline: none;
+  }
+
+  &--buy {
+    background-color: $red;
+
+    &:hover {
+      background-color: darken($red, 20%);
+    }
+  }
+
+  &--preview {
+    border: 1px solid $white;
+    background-color: $black-100;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &--work {
+
+    margin: 5px;
+    padding: 0;
+    fill: $black-200;
+    //stroke: $grey-200;
+
+    &:hover {
+      fill: $red;
+    }
+  }
+}
+
+
+

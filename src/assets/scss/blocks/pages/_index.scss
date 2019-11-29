@@ -1,0 +1,302 @@
+
+
+/*  БЛОК PROMO
+================================
+*/
+.wrapper-promo {
+  background-image: url("/src/assets/img/lg-logo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.promo {
+  display: flex;
+  height: 800px;
+  background-color: transparent;
+}
+
+
+.promo__info-wrapper {
+  margin: auto 55px auto auto;
+  padding-top: 50px;
+
+}
+
+.promo__title {
+  margin: 0;
+
+}
+
+.promo__title--first-line {
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 50px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.promo__title--second-line {
+  font-size: 43px;
+  font-weight: 900;
+  line-height: 80px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+
+.promo__title--red {
+  color: $red;
+}
+
+.promo__desc {
+  margin-top: 0;
+  margin-bottom: 45px;
+  font-size: 19px;
+  color: $grey;
+  text-transform: uppercase;
+}
+
+.promo__controls {
+  button:first-child {
+    margin-right: 26px;
+  }
+}
+
+
+
+/*  БЛОК FATURES
+================================
+*/
+
+.wrapper--features {
+  background-color: $black-100;
+}
+
+.features {
+  background-color: inherit;
+}
+
+
+.features {
+  padding: 80px 0 110px;
+
+}
+
+.features__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.features__item {
+  position: relative;
+  cursor: pointer;
+
+  &:hover .features__img {
+    fill: $red;
+    stroke: $red;
+  }
+
+  &:hover .features__title {
+    color: $red;
+  }
+  &:hover .features__desc{
+    color: $white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    bottom: -30px;
+    left: 0;
+    background-color: $red;
+  }
+}
+
+.features__img {
+  fill: $grey;
+  stroke: $grey;
+}
+
+.features__title {
+  font-size: 18px;
+  font-weight: 900;
+  color: $grey-200;
+  text-transform: uppercase;
+}
+
+.features__desc {
+  font-size: 14px;
+  color: $grey;
+}
+
+
+/*  Блок Recent Work
+================================
+*/
+
+.wrapper--recent-work {
+  background-color: $black-200;
+}
+
+.recent-work {
+  min-height: 300px;
+  padding: 80px 0 160px;
+  background-color: inherit;
+}
+
+.recent-work__intro {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    top: -30px;
+    left: 0;
+    background-color: $green;
+  }
+}
+
+
+.recent-work__item {
+
+  position: relative;
+  overflow: hidden;
+  border: 4px solid transparent;
+
+  &:hover {
+    border: 4px solid $red;
+  }
+
+  &:hover .work__info{
+    opacity: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+
+.recent-work__title {
+  font-size: 30px;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.recent-work__desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $grey;
+}
+
+
+.work__first {
+  background-image: url("/src/assets/img/recent-work-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.work__two {
+  background-image: url("/src/assets/img/recent-work-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.work__three {
+  background-image: url("/src/assets/img/recent-work-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.work__four {
+  background-image: url("/src/assets/img/recent-work-4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.work__five {
+  background-image: url("/src/assets/img/recent-work-5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.work__info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 2;
+  margin: 20px 45px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+
+.work__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.work__desc {
+  position: relative;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $grey-400;
+  margin-bottom: 100px;
+
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    bottom: -30px;
+    left: 0;
+    background-color: $red;
+  }
+}
+
+.work__btn-wrapper {
+  margin-top: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

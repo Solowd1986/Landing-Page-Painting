@@ -1,0 +1,27 @@
+
+
+/*  Фикс IE11 для прижатия футера к подвалу  */
+html {
+  display: flex;
+  flex-direction: column;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-size: 16px;
+}
+
+.wrapper {
+  @include min-max($max-width: 2133px);
+}
+
+.container {
+  @include min-max($max-width: 1305px);
+}
+
+
