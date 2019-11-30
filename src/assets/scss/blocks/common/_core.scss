@@ -1,5 +1,4 @@
 
-
 /*  Фикс IE11 для прижатия футера к подвалу  */
 html {
   display: flex;
@@ -17,15 +16,15 @@ body {
 }
 
 .wrapper {
-  @include min-max($max-width: 2133px, $padding: 15px);
+  @include min-max($max-width: $site-max-width, $padding: 15px);
 }
 
-.wrapper-offset {
-  @include min-max($max-width: 2133px, $padding: 15px);
+.wrapper-no-offset {
+  @include min-max($max-width: $site-max-width);
 }
 
 .container {
-  @include min-max($max-width: 1305px);
+  @include min-max($max-width: $container-width);
 }
 
 

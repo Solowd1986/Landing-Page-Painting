@@ -1,5 +1,6 @@
 
 .wrapper--header {
+  position: relative;
   border-bottom: 5px solid $red;
   background-color: $black-100;
 }
@@ -30,6 +31,10 @@
 
 .site-nav__item:not(:last-child) {
   margin-right: 33px;
+
+  @media (max-width: 850px) {
+    margin-right: 0;
+  }
 }
 
 .site-nav__link {
@@ -40,6 +45,10 @@
   font-weight: 400;
   color: $grey;
   text-transform: uppercase;
+
+  @media (max-width: 850px) {
+    margin: 15px 0;
+  }
 
   &:hover {
     position: relative;
@@ -69,6 +78,19 @@
   @media (max-width: 850px) {
     display: inline-block;
     margin: 25px 0 25px auto;
+  }
+
+  &:hover + .site-nav {
+    display: flex;
+    position: absolute;
+    width: 50vw;
+    top: 98px;
+    right: 0;
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: grey;
   }
 
 }

@@ -3,7 +3,8 @@ $img_dir : "/src/assets/img";
 $font_dir : "/src/assets/fonts";
 $tpl_dir : "/src/assets/tpl";
 
-$container-width : 1200px;
+$site-max-width: 2133px;
+$container-width : 1305px;
 
 
 $black: #000000;
@@ -14,6 +15,7 @@ $grey :#555555;
 $grey-100 :#707070;
 $grey-200 :#636363;
 $grey-400: #959595;
+$grey-500: #363636;
 
 
 $green: #464646;

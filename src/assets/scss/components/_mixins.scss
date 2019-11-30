@@ -10,6 +10,31 @@
   margin: 0 auto;
 }
 
+
+/*  Блок миксинов для адаптивной сетки
+================================
+*/
+@mixin container-negative-margins($margin: 15) {
+  margin-left: -$margin#{px};
+  margin-right: -$margin#{px};
+}
+
+@mixin generate-columns-for-item($item-columns, $columns: 12, $offset: 30px) {
+  width: calc(100% / 12 * #{$item-columns} - #{$offset});
+  margin-left: $offset/2;
+  margin-right: $offset/2;
+}
+
+@mixin generate-media-query-columns-for-item($media-query, $columns-count) {
+  @media (max-width: $media-query#{px}) {
+    @include generate-columns-for-item($columns-count);
+  }
+}
+
+
+
+
+
 /*  Миксин для расчета соотношения сторон элемента */
 @mixin calc-ratio($width: 16, $height: 9) {
   padding-top: #{(100 / $width * $height)}+"%";
