@@ -17,7 +17,11 @@ body {
 }
 
 .wrapper {
-  @include min-max($max-width: 2133px);
+  @include min-max($max-width: 2133px, $padding: 15px);
+}
+
+.wrapper-offset {
+  @include min-max($max-width: 2133px, $padding: 15px);
 }
 
 .container {

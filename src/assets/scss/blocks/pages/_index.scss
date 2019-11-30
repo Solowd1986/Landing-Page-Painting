@@ -7,6 +7,9 @@
   background-image: url("/src/assets/img/lg-logo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 675px) {
+  }
 }
 
 .promo {
@@ -20,11 +23,14 @@
   margin: auto 55px auto auto;
   padding-top: 50px;
 
+  @media (max-width: 675px) {
+  text-align: center;
+  }
+
 }
 
 .promo__title {
   margin: 0;
-
 }
 
 .promo__title--first-line {
@@ -33,6 +39,10 @@
   line-height: 50px;
   color: $white;
   text-transform: uppercase;
+
+  @media (max-width: 675px) {
+    font-size: 50px;
+  }
 }
 
 .promo__title--second-line {
@@ -41,6 +51,9 @@
   line-height: 80px;
   color: $white;
   text-transform: uppercase;
+  @media (max-width: 675px) {
+    font-size: 33px;
+  }
 }
 
 
@@ -54,11 +67,29 @@
   font-size: 19px;
   color: $grey;
   text-transform: uppercase;
+
+  @media (max-width: 675px) {
+    font-size: 15px;
+  }
+
 }
 
 .promo__controls {
+  display: flex;
+  flex-wrap: wrap;
+
   button:first-child {
     margin-right: 26px;
+  }
+
+  @media (max-width: 486px) {
+    flex-direction: column;
+    align-items: center;
+
+    button:first-child {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
   }
 }
 
@@ -74,23 +105,35 @@
 
 .features {
   background-color: inherit;
-}
-
-
-.features {
   padding: 80px 0 110px;
-
 }
+
 
 .features__list {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 1333px) {
+    justify-content: center;
+  }
 }
 
 .features__item {
   position: relative;
   cursor: pointer;
+  transition: .3s linear;
+  min-width: 290px;
+  max-width: 326px;
+
+  width: calc(100% / 12 * 4);
+
+  @media (max-width: 1333px) {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
 
   &:hover .features__img {
     fill: $red;
@@ -116,6 +159,8 @@
 }
 
 .features__img {
+  vertical-align: bottom;
+  border-radius: 50%;
   fill: $grey;
   stroke: $grey;
 }
@@ -142,9 +187,10 @@
 }
 
 .recent-work {
-  min-height: 300px;
+  display: grid;
   padding: 80px 0 160px;
   background-color: inherit;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .recent-work__intro {
@@ -161,6 +207,20 @@
   }
 }
 
+.recent-work__title {
+  font-size: 30px;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.recent-work__desc {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $grey;
+}
+
 
 .recent-work__item {
 
@@ -175,36 +235,6 @@
   &:hover .work__info{
     opacity: 1;
   }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(0,0,0,0.5);
-    opacity: 0;
-  }
-
-  &:hover::after {
-    opacity: 1;
-  }
-}
-
-
-.recent-work__title {
-  font-size: 30px;
-  font-weight: 700;
-  color: $white;
-  text-transform: uppercase;
-}
-
-.recent-work__desc {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  color: $grey;
 }
 
 
@@ -238,12 +268,14 @@
 
 .work__info {
   display: flex;
-  flex-direction: column;
   position: relative;
-  z-index: 2;
-  margin: 20px 45px;
+  z-index: 1;
+  flex-direction: column;
+  padding: 20px 45px;
   overflow: hidden;
+  background-color: rgba(0,0,0,0.7);
   opacity: 0;
+  transition: .4s linear;
 }
 
 
@@ -256,11 +288,11 @@
 
 .work__desc {
   position: relative;
+  margin-bottom: 100px;
   font-size: 12px;
   font-weight: 400;
   line-height: 20px;
   color: $grey-400;
-  margin-bottom: 100px;
 
   text-transform: uppercase;
 
@@ -277,18 +309,133 @@
 
 .work__btn-wrapper {
   margin-top: auto;
-  margin-left: auto;
   margin-bottom: 20px;
+  margin-left: auto;
 }
 
 
 
 
+/*  Блок Adaptive Design
+================================
+*/
+
+.wrapper--responsive-design {
+  background-color: $black-100;
+}
+
+.responsive-design {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  padding-top: 90px;
+  overflow: hidden;
+  background-color: inherit;
+}
+
+.responsive-design__img-wrapper {
+  position: relative;
+  width: 621px;
+}
+
+.responsive-design__img-bg {
+  position: absolute;
+}
+
+.responsive-design__img-sm {
+  position: absolute;
+  bottom: -90px;
+  left: 540px;
+}
+
+.responsive-design__options {
+  display: flex;
+  flex-basis: 440px;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: auto;
+}
 
 
+.responsive-design__title {
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 2px;
+    top: -30px;
+    left: 0;
+    background-color: $green;
+  }
+}
+
+.responsive-design__desc {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: $green;
+}
 
 
+.responsive-design__list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  padding-left: 30px;
+}
 
+.responsive-design__item {
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  color: $grey-400;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    top: calc(50% - 2px);
+    left: 0;
+    background-color: $red;
+  }
+}
+
+.btn--buy-now {
+  align-self: flex-start;
+  margin-bottom: 100px;
+  padding: 20px 31px;
+  background-color: $yellow;
+
+  &:hover {
+    background-color: darken($yellow, 10%);
+  }
+}
+
+
+/*  Блок Skills
+================================
+*/
+
+.wrapper--skills {
+  background-color: $red;
+}
+
+.skills {
+  min-height: 300px;
+}
 
 
 

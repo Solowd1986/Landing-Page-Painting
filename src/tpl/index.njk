@@ -1,4 +1,3 @@
-
 {% extends "common/_base-layout.njk" %}
 
 {% block content %}
@@ -8,7 +7,8 @@
 
             <div class="promo__info-wrapper">
                 <h1 class="promo__title">
-                    <span class="promo__title--first-line">Smart Moves</span><br>
+                    <span class="promo__title--first-line">Smart Moves</span>
+                    <br>
                     <span class="promo__title--second-line">of <span class="promo__title--red">Successful</span> Business</span>
                 </h1>
                 <p class="promo__desc">
@@ -85,7 +85,7 @@
                     <p class="work__desc">Graphic Designer, Photoshop</p>
                     <div class="work__btn-wrapper">
                         <button class="btn btn--work">
-                            <svg fill="" width="42" height="42" role="img">
+                            <svg width="42" height="42" role="img">
                                 <use xlink:href="#search-icon"/>
                             </svg>
                         </button>
@@ -173,10 +173,45 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
-
     </div>
 
-{%  endblock %}
+
+
+    <div class="wrapper wrapper--responsive-design">
+        <section class="container responsive-design">
+
+            <div class="responsive-design__img-wrapper">
+                <img class="responsive-design__img-bg" src="/src/assets/img/browser.png" alt="image">
+            </div>
+            <img class="responsive-design__img-sm" src="/src/assets/img/iphone.png" alt="image">
+
+            <div class="responsive-design__options">
+                <h2 class="responsive-design__title">
+                    Fully Responsive <br>
+                    Design Ready
+                </h2>
+                <p class="responsive-design__desc">
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.
+                    Claritas est etiam processus dynamicus.
+                </p>
+                <ul class="responsive-design__list">
+                    <li class="responsive-design__item">Claritas est etiam processus dynamicus.</li>
+                    <li class="responsive-design__item">Mirum est notare quam littera gothica, quam.</li>
+                    <li class="responsive-design__item">Nam liber tempor cum soluta.</li>
+                    <li class="responsive-design__item">Duis autem vel eum iriure dolor in hendrerit.</li>
+                    <li class="responsive-design__item">Typi non habent claritatem insitam.</li>
+                </ul>
+                <button class="btn btn--buy-now">Buy This Now</button>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="wrapper wrapper--skills">
+        <section class="container skills">
+
+        </section>
+    </div>
+
+{% endblock %}

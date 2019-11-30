@@ -11,9 +11,10 @@
 }
 
 .header__logo {
-  color: $white;
+  min-width: 100px;
   font-size: 56px;
   font-weight: 400;
+  color: $white;
 }
 
 
@@ -21,6 +22,10 @@
   display: flex;
   align-items: center;
   margin-left: auto;
+
+  @media (max-width: 850px) {
+    display: none;
+  }
 }
 
 .site-nav__item:not(:last-child) {
@@ -33,12 +38,12 @@
   padding: 10px 10px;
   font-size: 12px;
   font-weight: 400;
-  text-transform: uppercase;
   color: $grey;
+  text-transform: uppercase;
 
   &:hover {
-    color: $red;
     position: relative;
+    color: $red;
   }
 
   &:hover::before {
@@ -48,9 +53,41 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
     width: 8px;
     height: 2px;
+    top: 0;
     background-color: $red;
   }
+}
+
+.mobile-menu__icon {
+  display: none;
+  width: 44px;
+  background-color: transparent;
+  transition: .3s;
+
+  @media (max-width: 850px) {
+    display: inline-block;
+    margin: 25px 0 25px auto;
+  }
+
+}
+.mobile-menu__icon::before, .mobile-menu__icon::after, .mobile-menu__icon span {
+  content: "";
+  display: block;
+  height: 5px;
+  margin: 7px 0;
+  border-radius: 3px;
+  background-color: $white;
+  transition: all 0.2s ease-in-out;
+}
+
+.mobile-menu__icon--active::before {
+  transform: translateY(12px) rotate(135deg);
+}
+.mobile-menu__icon--active::after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+.mobile-menu__icon--active span {
+  transform: scale(0);
 }
