@@ -4,7 +4,7 @@
 
     <div class="wrapper wrapper-promo">
         <section class="container promo">
-
+            <h2 class="visually-hidden">Promo</h2>
             <div class="promo__info-wrapper">
                 <h1 class="promo__title">
                     <span class="promo__title--first-line">Smart Moves</span>
@@ -24,6 +24,7 @@
 
     <div class="wrapper wrapper--features">
         <section class="container features">
+            <h2 class="visually-hidden">Features</h2>
             <ul class="features__list">
                 <li class="features__item">
                     <svg class="features__img" width="100" height="100">
@@ -66,8 +67,9 @@
     </div>
 
 
-    <div class="wrapper wrapper--recent-work">
+    <div class="wrapper-no-offset wrapper--recent-work">
         <section class="container recent-work">
+            <h2 class="visually-hidden">Recent Work</h2>
 
             <div class="recent-work__intro">
                 <h2 class="recent-work__title">
@@ -75,7 +77,8 @@
                     Recent Work
                 </h2>
                 <p class="recent-work__desc">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Claritas est etiam processus dynamicus.
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                    laoreet. Claritas est etiam processus dynamicus.
                 </p>
             </div>
 
@@ -86,12 +89,12 @@
                     <div class="work__btn-wrapper">
                         <button class="btn btn--work">
                             <svg width="42" height="42" role="img">
-                                <use xlink:href="#search-icon"/>
+                                <use xlink:href="#search-icon"></use>
                             </svg>
                         </button>
                         <button class="btn btn--work">
                             <svg fill="" width="42" height="42" role="img">
-                                <use xlink:href="#link-icon"/>
+                                <use xlink:href="#link-icon"></use>
                             </svg>
                         </button>
                     </div>
@@ -177,14 +180,16 @@
     </div>
 
 
-
     <div class="wrapper wrapper--responsive-design">
-        <section class="container responsive-design">
 
+        <section class="container responsive-design">
+            <h2 class="visually-hidden">Design</h2>
             <div class="responsive-design__img-wrapper">
-                <img class="responsive-design__img-bg" src="/src/assets/img/browser.png" alt="image">
+                <div class="responsive-design__img-wrapper-bg">
+                    <img class="responsive-design__img-bg" src="/src/assets/img/browser.png" alt="image">
+                </div>
+                <img class="responsive-design__img-sm" src="/src/assets/img/iphone.png" alt="image">
             </div>
-            <img class="responsive-design__img-sm" src="/src/assets/img/iphone.png" alt="image">
 
             <div class="responsive-design__options">
                 <h2 class="responsive-design__title">
@@ -192,7 +197,7 @@
                     Design Ready
                 </h2>
                 <p class="responsive-design__desc">
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.
+                    Lorem ipsum dolor sit amet, consectetuer&shy;adipiscing elit, sed diam nonummy nibh&shy;euismod tincidunt ut laoreet.
                     Claritas est etiam processus dynamicus.
                 </p>
                 <ul class="responsive-design__list">
@@ -206,6 +211,7 @@
             </div>
         </section>
     </div>
+
 
     <div class="wrapper wrapper--skills">
         <section class="container skills">
@@ -248,5 +254,48 @@
 
         </section>
     </div>
+
+
+    <div class="wrapper wrapper--happy-clients">
+
+        <section class="happy-clients">
+            <h2 class="happy-clients__title">Our Happy Clients</h2>
+            <p class="happy-clients__desc">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                nibh euismod tincidunt ut laoreet. Claritas est etiam processus dynamicus.
+            </p>
+            <ul class="happy-clients__list">
+
+                <li class="happy-clients__slider-nav-prev"></li>
+                <li class="happy-clients__item">
+                    <a class="happy-clients__link" href="#">
+                        <img src="/src/assets/img/" alt="image" class="happy-clients__img">
+                    </a>
+                </li>
+                <li class="happy-clients__item">
+                    <a class="happy-clients__link" href="#">
+                        <img src="/src/assets/img/" alt="image" class="happy-clients__img">
+                    </a>
+                </li>
+                <li class="happy-clients__item">
+                    <a class="happy-clients__link" href="#">
+                        <img src="/src/assets/img/" alt="image" class="happy-clients__img">
+                    </a></li>
+                <li class="happy-clients__item">
+                    <a class="happy-clients__link" href="#">
+                        <img src="/src/assets/img/" alt="image" class="happy-clients__img">
+                    </a>
+                </li>
+                <li class="happy-clients__item">
+                    <a class="happy-clients__link" href="#">
+                        <img src="/src/assets/img/" alt="image" class="happy-clients__img">
+                    </a>
+                </li>
+                <li class="happy-clients__slider-nav-next"></li>
+            </ul>
+        </section>
+
+    </div>
+
 
 {% endblock %}

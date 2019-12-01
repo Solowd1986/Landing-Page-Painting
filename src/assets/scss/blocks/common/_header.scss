@@ -39,6 +39,7 @@
 
 .site-nav__link {
   display: block;
+  position: relative;
   margin: 70px 0;
   padding: 10px 10px;
   font-size: 12px;
@@ -51,7 +52,6 @@
   }
 
   &:hover {
-    position: relative;
     color: $red;
   }
 
@@ -61,6 +61,7 @@
 
   &::before {
     content: "";
+    display: none;
     position: absolute;
     width: 8px;
     height: 2px;

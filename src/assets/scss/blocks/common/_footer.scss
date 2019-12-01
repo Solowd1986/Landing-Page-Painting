@@ -17,6 +17,40 @@
   align-items: center;
 }
 
-.site-nav__link--footer {
+.footer-nav__item {
+  margin-right: 33px;
+
+  @media (max-width: 850px) {
+    margin-right: 0;
+  }
+}
+
+.footer-nav__link {
+  display: block;
+  position: relative;
   margin: 25px 0;
+  padding: 10px 10px;
+  font-size: 12px;
+  font-weight: 400;
+  color: $grey;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $red;
+  }
+
+  &:hover::before {
+    display: inline-block;
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    top: 0;
+    background-color: $red;
+  }
+
 }

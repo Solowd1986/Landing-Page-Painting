@@ -1,8 +1,7 @@
 
 
 
-@mixin min-max($min-width: 320px, $max-width: 1200px, $padding: 0, $bg-color: initial) {
-  min-width: $min-width;
+@mixin min-max($max-width: 1200px, $padding: 0, $bg-color: initial) {
   max-width: $max-width;
   padding: 0 $padding;
   background-color: $bg-color;
