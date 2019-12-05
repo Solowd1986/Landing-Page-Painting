@@ -1,11 +1,11 @@
 
 @font-face {
   font-family: "";
-  src: local("");
-  src: url("#{$font_dir}/FONT__NAME.eot?#iefix") format("embedded-opentype"),
-  url("#{$font_dir}/FONT__NAME.woff") format("woff"),
-  url("#{$font_dir}/FONT__NAME.woff2") format("woff2"),
-  url("#{$font_dir}/FONT__NAME.ttf") format("truetype");
+  src:  local(""),
+        url("#{$font_dir}/FONT__NAME.eot?#iefix") format("embedded-opentype"),
+        url("#{$font_dir}/FONT__NAME.woff") format("woff"),
+        url("#{$font_dir}/FONT__NAME.woff2") format("woff2"),
+        url("#{$font_dir}/FONT__NAME.ttf") format("truetype");
 
   font-weight: normal;
   font-style: normal;
